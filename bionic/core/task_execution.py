@@ -235,6 +235,7 @@ class TaskState:
     """
 
     def __init__(self, task, dep_states, case_key, provider, entity_defs_by_dnode):
+        assert len(task.keys) == 1
         assert len(entity_defs_by_dnode) == len(task.keys)
 
         self.task = task

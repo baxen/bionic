@@ -119,5 +119,5 @@ def test_wrong_number_of_outputs(builder):
         return (1, 2, 3)
 
     flow = builder.build()
-    with pytest.raises(ValueError):
+    with pytest.raises(AssertionError):
         flow.get("a")
